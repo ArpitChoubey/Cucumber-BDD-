@@ -1,159 +1,426 @@
-# BDD Test Automation Framework Cucumber Java 
-## Overview
+# 🥒 BDD Test Automation Framework | Cucumber Java | Gherkin | Maven | TestNG
 
-This repository demonstrates a complete **Cucumber BDD Framework** structure using:
+<p align="center">
 
-* **Gherkin Feature Files**
-* **Step Definitions** (Java)
-* **Test Runner** with Cucumber options
-* **Page Objects / Business Logic Methods** (optional foundation)
+![Java](https://img.shields.io/badge/Java-17-orange?style=for-the-badge&logo=openjdk)
+![Cucumber](https://img.shields.io/badge/Cucumber-BDD-brightgreen?style=for-the-badge&logo=cucumber)
+![TestNG](https://img.shields.io/badge/TestNG-Framework-red?style=for-the-badge)
+![Maven](https://img.shields.io/badge/Maven-Build-blue?style=for-the-badge&logo=apachemaven)
+![BDD](https://img.shields.io/badge/Behavior_Driven_Development-BDD-success?style=for-the-badge)
+![Automation Testing](https://img.shields.io/badge/Automation-Testing-blueviolet?style=for-the-badge)
+![QA](https://img.shields.io/badge/Quality-Assurance-purple?style=for-the-badge)
+![Gherkin](https://img.shields.io/badge/Gherkin-Given_When_Then-darkgreen?style=for-the-badge)
 
-It showcases how Behavior-Driven Development (BDD) brings collaboration between QA, Developers, and Business teams using natural-language test scenarios.
-
-The project follows standard Cucumber folder structure and is ideal for:
-
-* Beginners learning Cucumber from scratch
-* QA Automation Engineers preparing for interviews
-* People building their first BDD framework with TestNG / JUnit
+</p>
 
 ---
 
-## What is Cucumber BDD?
+# 📌 Project Overview
 
-Cucumber is a testing framework that enables writing tests in **plain English**, using **Gherkin syntax** (`Given/When/Then`).
+This repository demonstrates a **Behavior-Driven Development (BDD) Test Automation Framework** built using **Cucumber, Java, Maven, and TestNG**.
 
-### ✔ Key Benefits
+The framework follows industry-standard BDD practices where business requirements are translated into **human-readable Gherkin scenarios**, allowing seamless collaboration between **Business Analysts, Product Owners, Developers, and QA Engineers**.
 
-* Improves collaboration with non-technical stakeholders
-* Easy-to-read test cases
-* Supports Data Tables & Scenario Outlines
-* Integrates with Selenium WebDriver
-* Supports parallel execution
-* Provides clean separation of Feature files and Automation code
+Instead of writing automation directly in Java, the framework separates **business scenarios** from **automation implementation**, making tests easier to understand, maintain, and scale.
 
----
+> **GitHub Repository**
 
-## Project Modules
-
-### 🔹 1. Feature Files (`Featuresfile`)
-
-Contains `.feature` files written in **Gherkin syntax**.
-Examples include:
-
-* `E-com.feature` — Ecommerce test scenarios
-* `login.feature` — Login test scenarios
-
-Each feature file includes:
-
-* Scenario
-* Steps (`Given`, `When`, `Then`)
-* Data using Scenario Outline (if applicable)
+🔗 https://github.com/ArpitChoubey/BDD-Test-Automation-framework-Cucumber-Java
 
 ---
 
-### 🔹 2. Step Definitions (`StepDefination`)
+# 🏷️ Project Tags
 
-Java classes containing automation code linked to Gherkin steps.
+`BDD`
+`CUCUMBER`
+`GHERKIN`
+`JAVA`
+`TESTNG`
+`MAVEN`
+`AUTOMATION TESTING`
+`QA AUTOMATION`
+`BDD FRAMEWORK`
+`TEST AUTOMATION`
+`SELENIUM READY`
+`ENTERPRISE QA`
+
+---
+
+# 🚀 Business Objective
+
+Modern Agile teams require automation that is understandable by both technical and non-technical stakeholders.
+
+This framework demonstrates how BDD enables teams to:
+
+- Convert requirements into executable specifications
+- Improve communication between QA, Developers, and Business Teams
+- Reduce misunderstandings
+- Increase test readability
+- Build maintainable automation frameworks
+- Support Agile and Scrum workflows
+
+---
+
+# ⭐ Framework Highlights
+
+### ✔ Behavior-Driven Development (BDD)
+
+Implements Cucumber BDD using simple, readable Gherkin syntax.
+
+---
+
+### ✔ Gherkin Feature Files
+
+Business scenarios written using:
+
+- Given
+- When
+- Then
+- And
+- But
+
+allowing anyone on the project to understand test behavior.
+
+---
+
+### ✔ Step Definitions
+
+Business scenarios are mapped to reusable Java methods using Cucumber annotations.
+
+Example:
+
+- @Given
+- @When
+- @Then
+
+This keeps business logic separate from automation implementation.
+
+---
+
+### ✔ Maven Project
+
+Dependency management using Maven.
+
+Simple project setup.
+
+Easy execution.
+
+---
+
+### ✔ Test Runner
+
+Cucumber Runner configured with:
+
+- Features path
+- Glue path
+- Plugins
+- Monochrome execution
+- Tag execution
+
+---
+
+### ✔ Scalable Framework Structure
+
+Designed using industry-standard package organization.
+
+Easy to extend into enterprise automation frameworks.
+
+---
+
+### ✔ Interview Friendly
+
+Perfect for understanding:
+
+- BDD
+- Gherkin
+- Cucumber Architecture
+- Framework Design
+- Feature-to-Step Mapping
+
+---
+
+# 📚 What is Cucumber?
+
+Cucumber is a Behavior-Driven Development framework that allows test scenarios to be written in plain English using **Gherkin syntax**.
+
+Instead of writing only Java automation code, teams describe application behavior through executable specifications.
+
+Example:
+
+```gherkin
+Feature: Login
+
+Scenario: Successful Login
+
+Given User is on Login Page
+
+When User enters valid credentials
+
+Then User should login successfully
+```
+
+---
+
+# 💼 Why BDD?
+
+BDD improves communication across teams.
+
+### Business Team
+
+Can understand feature files.
+
+### Developers
+
+Can understand expected behavior before coding.
+
+### QA Engineers
+
+Can automate directly from requirements.
+
+### Product Owners
+
+Can validate business rules easily.
+
+---
+
+# 📂 Project Structure
+
+```
+BDD-Test-Automation-framework-Cucumber-Java
+│
+├── src
+│
+│── main
+│   │
+│   ├── java
+│       │
+│       ├── Featuresfile
+│       │
+│       ├── StepDefination
+│       │
+│       └── TestRunner
+│
+├── pom.xml
+├── README.md
+├── .classpath
+├── .project
+└── .settings
+```
+
+---
+
+# 📖 Project Modules
+
+## 🥒 Feature Files
+
+Contains business-readable scenarios.
+
 Examples:
 
-* `EcommercePurchase.java`
-* `LoginStep.java`
+- Login
+- E-Commerce Purchase
 
-Each method is mapped using annotations like:
+Each feature demonstrates:
 
-```java
-@Given("user is on login page")
-public void user_on_login_page() { ... }
+- Scenarios
+- Scenario Outline
+- Test Data
+- Expected Behavior
+
+---
+
+## ⚙ Step Definitions
+
+Contains Java implementation of Gherkin steps.
+
+Examples include:
+
+- LoginStep.java
+
+- EcommercePurchase.java
+
+Each Gherkin statement maps directly to automation code.
+
+---
+
+## ▶ Test Runner
+
+Responsible for executing Feature Files.
+
+Supports:
+
+- Feature Path
+
+- Glue Code
+
+- Plugins
+
+- Tags
+
+- Reports
+
+---
+
+# 🧪 Cucumber Concepts Demonstrated
+
+This project covers:
+
+✅ Feature Files
+
+✅ Gherkin Language
+
+✅ Given / When / Then
+
+✅ Scenario
+
+✅ Scenario Outline
+
+✅ Step Definitions
+
+✅ Runner Classes
+
+✅ Maven Integration
+
+✅ Business Readable Tests
+
+✅ Automation Structure
+
+---
+
+# 📊 Enterprise QA Skills Demonstrated
+
+This repository showcases practical understanding of:
+
+- Behavior Driven Development
+
+- Test Automation Design
+
+- Framework Structure
+
+- Business Requirement Mapping
+
+- Reusable Automation Components
+
+- Clean Project Organization
+
+- Maven Build Management
+
+- Agile Testing Practices
+
+- Automation Readability
+
+---
+
+# 🚀 Running the Framework
+
+## Clone Repository
+
+```bash
+git clone https://github.com/ArpitChoubey/BDD-Test-Automation-framework-Cucumber-Java.git
 ```
 
 ---
 
-### 🔹 3. Test Runner (`TestRunner`)
+## Install Dependencies
 
-Contains code to run Cucumber tests with options like:
-
-* `features` path
-* `glue` path
-* `tags` for selective execution
-* `plugin` for HTML / JSON reports
-
-Example files:
-
-* `EcomRunner.java`
-* `TestRun.java`
-
-Typical runner structure:
-
-```java
-@CucumberOptions(
-    features = "src/main/java/java/Featuresfile",
-    glue = {"StepDefination"},
-    plugin = {"pretty", "html:target/cucumber-reports"},
-    monochrome = true
-)
+```bash
+mvn clean install
 ```
 
 ---
 
-## Folder Structure
+## Execute Tests
 
-```
-Cucumber-BDD-/
-├── src/
-│   └── main/
-│       └── java/
-│           └── java/
-│               ├── Featuresfile/
-│               │   ├── E-com.feature
-│               │   ├── login.feature
-│               │   └── package-info.java
-│               │
-│               ├── StepDefination/
-│               │   ├── EcommercePurchase.java
-│               │   ├── LoginStep.java
-│               │   └── package-info.java
-│               │
-│               └── TestRunner/
-│                   ├── EcomRunner.java
-│                   ├── TestRun.java
-│                   └── package-info.java
-│
-├── .settings/
-├── .classpath
-├── .gitignore
-├── .project
-└── pom.xml
+Run using Maven
+
+```bash
+mvn test
 ```
 
----
+or
 
-## How to Run Cucumber Tests
-
-1. Install dependencies using Maven (`pom.xml`).
-2. Open **EcomRunner.java** or **TestRun.java**.
-3. Right-click → **Run as Java Application**.
-4. Reports will be generated inside `target/` folder.
+Run the Cucumber Runner class directly from Eclipse or IntelliJ.
 
 ---
 
-## Notes
+# 📁 Framework Benefits
 
-* This is a clean BDD example suitable for learning.
-* To convert it into a complete framework, you can add:
+✔ Human-readable automation
 
-  * Page Object Model (POM) classes
-  * Hooks (`@Before`, `@After`)
-  * Logging (Log4j)
-  * Extent Reports
-  * Parallel execution using TestNG
- 
-    ## 👨‍💻 Author
+✔ Business-friendly scenarios
 
-**Arpit Choubey — SDET | QA | Automation Engineer**
-🔗 **LinkedIn** | **Medium**
+✔ Clean separation of business logic
 
-## ⭐ Support
+✔ Easy maintenance
 
-If this repository helps you, please **Star 🌟** it!
+✔ Better collaboration
+
+✔ Highly scalable
+
+✔ Enterprise-ready architecture
 
 ---
+
+# 💼 Why Recruiters Should Look at This Repository
+
+This project demonstrates more than just Cucumber syntax.
+
+It highlights practical experience with:
+
+- BDD Framework Design
+
+- Agile Development Practices
+
+- Requirement-to-Test Mapping
+
+- Automation Architecture
+
+- Java Programming
+
+- Maven Project Management
+
+- Cucumber Framework
+
+- Test Maintainability
+
+- Enterprise QA Best Practices
+
+The framework reflects the foundational architecture commonly adopted in enterprise automation projects.
+
+---
+
+# 👨‍💻 About the Author
+
+## Arpit Choubey
+
+**SDET | QA Automation Engineer | Selenium | Playwright | Java | API Testing | Docker | Jenkins | SQL | AI Testing**
+
+Passionate about designing scalable automation frameworks and delivering high-quality software through modern testing practices.
+
+---
+
+## 🌐 Connect with Me
+
+### GitHub
+
+https://github.com/ArpitChoubey
+
+### LinkedIn
+
+https://www.linkedin.com/in/arpitchoubey/
+
+### Medium
+
+https://medium.com/@ArpitChoubey9
+
+---
+
+# ⭐ Support
+
+If you found this repository useful, consider giving it a **Star ⭐**.
+
+Your support motivates me to continue building and sharing enterprise-grade QA Automation projects.
+
+---
+
+## 🚀 *"Great automation starts with clear business requirements. BDD bridges the gap between ideas and executable quality."*
